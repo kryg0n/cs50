@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'CS50 in Hindi',
+  tagline: 'A CS Cult now in hindi',
+  url: 'https://cs50.kalsotra.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'kryg0n', // Usually your GitHub org/user name.
+  projectName: 'cs50', // Usually your repo name.
 
   presets: [
     [
@@ -22,16 +22,14 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/kryg0n/cs50/edit/main/',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -42,22 +40,23 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+
+      hideableSidebar: true,
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
       navbar: {
-        title: 'My Site',
+        title: 'CS50 in Hindi',
+        hideOnScroll: true,
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Site Logo',
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
+         {
+            href: 'https://github.com/kryg0n/cs50',
             label: 'GitHub',
             position: 'right',
           },
