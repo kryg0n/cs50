@@ -3,6 +3,9 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const math = require('remark-math');
+const katex = require('rehype-katex');
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -28,6 +31,8 @@ const config = {
           editUrl: 'https://github.com/kryg0n/cs50/edit/main/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
         },
         blog: false,
         theme: {
@@ -35,6 +40,13 @@ const config = {
         },
       }),
     ],
+  ],
+  stylesheets: [
+    {
+      href: "https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css",
+      integrity: "sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc",
+      crossorigin: "anonymous",
+    },
   ],
 
   themeConfig:
@@ -52,7 +64,7 @@ const config = {
         hideOnScroll: true,
         logo: {
           alt: 'Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
          {
@@ -66,11 +78,11 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Videos',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Coming soon...',
+                to: '#',
               },
             ],
           },
@@ -79,15 +91,15 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/cs50',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discordapp.com/invite/cs50',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/cs50',
               },
             ],
           },
@@ -95,17 +107,17 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Welcome',
+                to: '/',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/kryg0n/cs50',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Compiled & Translated by Maanit.`,
       },
       prism: {
         theme: lightCodeTheme,
