@@ -18,19 +18,23 @@ const sidebars = {
 
   // But you can create a sidebar manually
   
-  tutorialSidebar: [
+  docs: [
+    'intro',
     {
       type: 'category',
-      label: 'Tutorial',
+      label: '0️⃣ Week 0',
       link: {
         type: 'generated-index',
       },
       collapsed: false,
       items: [
-        'intro'
-        
+        '0/notes',
+        '0/slides',
+        '0/src',
+        '0/transcript',        
       ]
     },
+    'license',
   ],
    
 };
